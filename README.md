@@ -1,5 +1,8 @@
-# Zoic
+# Zoic js
 #### Implicit function exports
+
+`npm install zoic`
+
 
 ```js
 // module.js
