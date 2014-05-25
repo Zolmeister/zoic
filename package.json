@@ -1,7 +1,7 @@
 {
   "name": "zoic",
   "version": "0.0.1",
-  "description": "",
+  "description": "implicit function exports",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/zoic.js"
@@ -14,6 +14,7 @@
   "bugs": {
     "url": "https://github.com/Zolmeister/zoic/issues"
   },
+  "licence": "MIT",
   "homepage": "https://github.com/Zolmeister/zoic",
   "dependencies": {
     "ast-scope": "^0.4.0",
