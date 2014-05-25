@@ -1,0 +1,18 @@
+{
+  "name": "zoic",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Zolmeister/zoic.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Zolmeister/zoic/issues"
+  },
+  "homepage": "https://github.com/Zolmeister/zoic"
+}
