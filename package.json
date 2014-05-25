@@ -1,6 +1,6 @@
 {
   "name": "zoic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "implicit function exports",
   "main": "index.js",
   "scripts": {

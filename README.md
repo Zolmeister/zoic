@@ -19,5 +19,5 @@ function _private() {
 
 ```js
 require('./module').abc // [Function abc]
-require('./module._private') // undefined
+require('./module')._private // undefined
 ```
