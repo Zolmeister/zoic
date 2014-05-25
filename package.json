@@ -1,10 +1,10 @@
 {
   "name": "zoic",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/zoic.js"
   },
   "repository": {
     "type": "git",
@@ -14,5 +14,13 @@
   "bugs": {
     "url": "https://github.com/Zolmeister/zoic/issues"
   },
-  "homepage": "https://github.com/Zolmeister/zoic"
+  "homepage": "https://github.com/Zolmeister/zoic",
+  "dependencies": {
+    "ast-scope": "^0.4.0",
+    "esprima": "^1.2.2"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.19.0"
+  }
 }
