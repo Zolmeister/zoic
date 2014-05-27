@@ -6,7 +6,7 @@
 
 ```js
 // module.js
-module.exports = eval(require('zoic'))
+require('zoic')
 
 function abc() {
 
