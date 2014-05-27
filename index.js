@@ -3,12 +3,14 @@
 var esprima = require('esprima')
 var as = require('ast-scope')
 var fs = require('fs')
-
-var sourceFile = module.parent.filename
+var metaz = require('metaz')
+var _ = require('lodash')
 
 // Invalidate require cache on each require to get the parent filename again
 delete require.cache[__filename]
-var source = fs.readFileSync(sourceFile, 'utf-8')
+var source = metaz.getSource(module.parent)
+var exported = metaz.getExports(module.parent, source)
+
 var ast = esprima.parse(source)
 var topScope = as.analyze(ast)
 
@@ -33,21 +35,7 @@ fileExports.forEach(function (exp, i) {
 })
 functions += '} })()'
 
-var sourcePath = sourceFile.replace(/[^\/]*$/, '')
-source = source.replace(/require\(['"](\..*)['"]\)/g, 'require(\'' + sourcePath + '$1\')')
-source = source.replace(/require\(['"]zoic['"]\)/, '{}')
 source += '\n module.exports = ' + functions
 
-
-var sourceExports = (function () {
-  var module = {
-    exports: {}
-  }
-
-  // var exports = module.exports
-
-  eval(source)
-  return module
-})()
-
-module.parent.exports = sourceExports.exports
+var newExports = metaz.getExports(module.parent, source)
+metaz.modifyExports(module.parent, _.defaults(newExports, exported))
