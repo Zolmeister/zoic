@@ -1,10 +1,10 @@
 {
   "name": "zoic",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "implicit function exports",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/zoic.js"
+    "test": "NODE_PATH=../ mocha test/zoic.js"
   },
   "repository": {
     "type": "git",
